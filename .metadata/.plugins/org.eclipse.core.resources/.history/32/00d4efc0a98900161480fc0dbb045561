@@ -10,8 +10,7 @@ public class TesteDAO {
 	public static void main(String[] args) {
 		
 		//testeCadastrar();
-		//testeAlterar();
-		testeExcluir();
+		testeAlterar();
 	}
 
 	private static void testeCadastrar() {

@@ -9,9 +9,7 @@ public class TesteDAO {
 
 	public static void main(String[] args) {
 		
-		//testeCadastrar();
-		//testeAlterar();
-		testeExcluir();
+		testeCadastrar();
 	}
 
 	private static void testeCadastrar() {
@@ -32,7 +30,7 @@ public class TesteDAO {
 	private static void testeAlterar(){
 		Usuario user = new Usuario();
 		user.setLogin("matheus");
-		user.setNome("matheus faustino");
+		user.setNome("matheus");
 		user.setSenha("1234");
 		user.setId(7);
 		
@@ -42,21 +40,6 @@ public class TesteDAO {
 			System.out.println("Alterado com sucesso!");
 		} catch (SQLException e) {
 			System.out.println("Erro ao alterar!");
-			e.printStackTrace();
-		}
-	}
-	
-	private static void testeExcluir(){
-		Usuario user = new Usuario();
-		user.setId(1);
-		
-		UsuarioDAO userDAO = new UsuarioDAO();
-		try {
-			userDAO.excluir(user);
-			System.out.println("Excluído com sucesso!");
-		} catch (SQLException e) {
-			System.out.println("Erro ao excluir!");
-			e.printStackTrace();
 		}
 	}
 

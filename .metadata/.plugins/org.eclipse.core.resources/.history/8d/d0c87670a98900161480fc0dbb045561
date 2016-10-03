@@ -34,14 +34,4 @@ public class UsuarioDAO {
 		preparador.execute();
 		preparador.close();
 	}
-	
-	public void excluir(Usuario usuario) throws SQLException {
-		String sql = "DELETE FROM USUARIO WHERE id=?";
-		
-		PreparedStatement preparador = con.prepareStatement(sql);
-		preparador.setInt(1, usuario.getId());
-		
-		preparador.execute();
-		preparador.close();
-	}
 }

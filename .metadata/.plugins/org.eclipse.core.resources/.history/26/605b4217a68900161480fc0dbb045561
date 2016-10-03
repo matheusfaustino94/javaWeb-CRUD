@@ -11,7 +11,7 @@ public class UsuarioDAO {
 	private Connection con = Conexao.getConnection();
 	
 	public void cadastrar (Usuario usuario) throws SQLException {
-		String sql = "INSERT INTO USUARIO (nome, login, senha) VALUES (?,?,?)";
+		String sql = "insert into usuario (nome, login, senha) values (?,?,?)";
 		
 		PreparedStatement preparador = con.prepareStatement(sql);
 		preparador.setString(1, usuario.getNome());
@@ -23,23 +23,12 @@ public class UsuarioDAO {
 	}
 	
 	public void alterar (Usuario usuario) throws SQLException {
-		String sql = "UPDATE USUARIO SET nome=?, login=?, senha=? WHERE id=?";
+		String sql = "update usuario set nome=? login=? senha=?";
 		
 		PreparedStatement preparador = con.prepareStatement(sql);
 		preparador.setString(1, usuario.getNome());
 		preparador.setString(2, usuario.getLogin());
 		preparador.setString(3, usuario.getSenha());
-		preparador.setInt(4, usuario.getId());
-		
-		preparador.execute();
-		preparador.close();
-	}
-	
-	public void excluir(Usuario usuario) throws SQLException {
-		String sql = "DELETE FROM USUARIO WHERE id=?";
-		
-		PreparedStatement preparador = con.prepareStatement(sql);
-		preparador.setInt(1, usuario.getId());
 		
 		preparador.execute();
 		preparador.close();
