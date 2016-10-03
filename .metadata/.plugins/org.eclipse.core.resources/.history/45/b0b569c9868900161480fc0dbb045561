@@ -1,0 +1,26 @@
+package br.com.m5Project.jdbc;
+
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.SQLException;
+
+import javax.swing.JOptionPane;
+
+
+public class Conexao{
+	
+	Connection con;
+	String driver = "jdbc:postgres://localhost:5423/bancocjweb1";
+	String user = "postgress";
+	String password = "mr1418";
+	
+	public Connection getConnection(){
+		try {
+			con = DriverManager.getConnection(driver, user, password);
+		} catch (SQLException e) {
+			JOptionPane.showInputDialog(e, "Erro de conexão");
+		}
+		return null;
+	}
+
+}

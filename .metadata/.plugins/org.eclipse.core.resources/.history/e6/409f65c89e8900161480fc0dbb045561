@@ -1,0 +1,5 @@
+package br.com.m5Project.jdbc;
+
+public class UsuarioDAO {
+
+}

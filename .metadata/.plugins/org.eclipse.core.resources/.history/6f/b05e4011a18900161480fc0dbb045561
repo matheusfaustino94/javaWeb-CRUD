@@ -1,0 +1,14 @@
+package br.com.m5Project.teste;
+
+import br.com.m5Project.entidades.Usuario;
+
+public class TesteDAO {
+
+	public static void main(String[] args) {
+		Usuario user = new Usuario();
+		user.setLogin("matheus");
+		user.setNome("matheus");
+		user.setSenha("1234");
+	}
+
+}

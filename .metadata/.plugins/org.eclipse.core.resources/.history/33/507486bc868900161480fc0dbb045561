@@ -1,0 +1,20 @@
+package br.com.m5Project.jdbc;
+
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.SQLException;
+
+
+public class Conexao{
+	
+	Connection con;
+	String driver = "jdbc:postgres://localhost:5423/bancocjweb1";
+	String user = "postgress";
+	String password = "mr1418";
+	
+	public Connection getConnection() throws SQLException{
+		con = DriverManager.getConnection(driver, user, password);
+		return null;
+	}
+
+}

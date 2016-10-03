@@ -1,0 +1,9 @@
+package br.com.m5Project.jdbc;
+
+import java.sql.Connection;
+
+public class UsuarioDAO {
+	
+	Connection con = Conexao.getConnection();
+	
+}
